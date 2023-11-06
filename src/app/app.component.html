@@ -1,0 +1,77 @@
+<div class="main-container">
+	<header class="header-2">
+		<div class="branding">
+			<a class="nav-link">
+				<clr-icon shape="home" size="24"></clr-icon>
+				<span class="title">Project Clarity</span>
+			</a>
+		</div>
+		<div class="header-nav">
+			<a class="active nav-link nav-text">Home</a>
+		</div>
+	</header>
+	<div class="content-container">
+		<div class="content-area">
+			<section>
+
+				<div class="clr-row">
+					<div class="clr-col-lg-5 clr-col-md-8 clr-col-12">
+						<div class="card">
+							<div class="card-header">
+								Angularized D3 Sparkline Chart
+							</div>
+							<div class="card-block">
+								<div class="card-text">
+									<div class="datapoint-info">
+                    {{ currentDataPoint ? (currentDataPoint?.x + ' => ' + currentDataPoint?.y) : '' }}
+                  </div>
+									<app-sparkline-chart class="line-chart" [data]="data"
+										(dataPointHover)="onDataPointHovered($event)"></app-sparkline-chart>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="clr-row">
+					<div class="clr-col-lg-5 clr-col-md-8 clr-col-12">
+						<div class="card">
+							<div class="card-header">
+								Angularized D3 Bar Chart
+							</div>
+							<div class="card-block">
+								<div class="card-text">
+									<div class="datapoint-info">
+                    {{ currentDataPoint ? (currentDataPoint?.x + ' => ' + currentDataPoint?.y) : '' }}
+                  </div>
+									<app-bar-chart class="bar-chart" [data]="data"
+										(dataPointHover)="onDataPointHovered($event)"></app-bar-chart>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+        
+				<div class="clr-row">
+					<div class="clr-col-lg-5 clr-col-md-8 clr-col-12">
+						<div class="card">
+							<div class="card-header">
+								Angularized D3 Donut Chart
+							</div>
+							<div class="card-block">
+								<div class="card-text">
+									<div class="datapoint-info">
+                    {{ currentDataPoint ? (currentDataPoint?.x + ' => ' + currentDataPoint?.y) : '' }}
+                  </div>
+									<app-donut-chart class="bar-chart" [data]="data"
+										(dataPointHover)="onDataPointHovered($event)"></app-donut-chart>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</section>
+		</div>
+	</div>
+</div>
